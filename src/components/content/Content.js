@@ -19,7 +19,7 @@ const Content = ({ sidebarIsOpen, toggleSidebar }) => (
   >
     <Topbar toggleSidebar={toggleSidebar} />
     <Switch>
-      <Route exact path="/" component={() => "Premier Pian Dashboard"} />
+      <Route exact path="/" component={() => "Dallas Premier Pian Dashboard"} />
       <Route exact path="/blogs" component={() => <Blog />} />
       <Route exact path="/news" component={() => <News />} />
       <Route exact path="/newslist" component={() => <NewsList />} />
