@@ -20,7 +20,7 @@ const BlogEdit = () => {
   const editor = useRef(null);
 
   let data = location.state.blogData;
-  debugger
+
   const [metaDes, setMetaDes] = useState(data.metaDes);
   const [foucKW, setFoucKW] = useState(data.foucKW);
   const [slug, setSlug] = useState(data.slug);
@@ -42,7 +42,7 @@ const BlogEdit = () => {
       category: category,
       // image: urls,
     };
-    debugger
+
     setLoader(true);
     let res = await api.patch("/blog/update/" + data._id, finalData);
     if (res.status === 200) {
@@ -70,7 +70,6 @@ const BlogEdit = () => {
             tabIndex={1} // tabIndex of textarea
             onChange={(newContent) => {
               setTitle(newContent);
-              console.log("dr sahib", newContent);
             }}
           />
         </FormGroup>

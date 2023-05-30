@@ -68,7 +68,6 @@ const BlogEdit = () => {
             tabIndex={1} // tabIndex of textarea
             onChange={(newContent) => {
               setTitle(newContent);
-              console.log("dr sahib", newContent);
             }}
           />
         </FormGroup>

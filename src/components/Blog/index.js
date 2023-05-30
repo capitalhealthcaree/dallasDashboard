@@ -43,7 +43,7 @@ const Blog = () => {
             if (seoTitle.toString().length <= 70) {
               setSeoTitleError(false);
               setLoader(true);
-              let res = await api.post("blog/createBlog", finalData);
+              let res = await api.post("/blog/createBlog", finalData);
               if (res.status === 200) {
                 setLoader(false);
                 toast("Blog created success", {
@@ -124,7 +124,6 @@ const Blog = () => {
             </FormGroup>
           </Col>
           <Col xs="6">
-            {" "}
             <FormGroup>
               <Label for="category">category</Label>
               <Input
