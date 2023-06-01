@@ -10,7 +10,7 @@ const Appointment = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await api.get("/appointment/getAll");
+      const res = await api.get("/appointment/getAppointmentsByPagination");
       if (res.status === 200) {
         if (res && res.data && res.data.data) setData(res.data.data);
       }
@@ -38,13 +38,10 @@ const Appointment = () => {
                 >
                   Download Details
                 </button>
+                
                 <div>
-                  <h5 class="d-inline mr-3">First Name:</h5>
-                  <p class="d-inline">{data.firstName}</p>
-                </div>
-                <div>
-                  <h5 class="d-inline mr-3">Last Name:</h5>
-                  <p class="d-inline">{data.lastName}</p>
+                  <h5 class="d-inline mr-3">Name:</h5>
+                  <p class="d-inline">{data.name}</p>
                 </div>
                 <div>
                   <h5 class="d-inline mr-3">Phone:</h5>

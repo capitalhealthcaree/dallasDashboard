@@ -32,7 +32,7 @@ const News = () => {
   const deletBlog = async (blogId) => {
     setDeletLoader(true);
     setDeletedBlogId(blogId);
-    const res = await api.delete("/news/" + blogId);
+    const res = await api.delete("/news/delete/" + blogId);
     if (res.status === 200) {
       toast("News deleted success", {
         position: toast.POSITION.TOP_RIGHT,

@@ -118,35 +118,6 @@ const BlogEdit = () => {
             </FormGroup>
           </Col>
           <Col xs="6">
-            {" "}
-            <FormGroup>
-              <Label for="category">category</Label>
-              <Input
-                type="select"
-                name="category"
-                id="category"
-                value={category}
-                onChange={(event) => {
-                  setCategory(event.target.value);
-                }}
-              >
-                <option>select</option>
-                <option value={"back-pain"}>Back Pain</option>
-                <option value={"leg-pain"}>Leg Pain</option>
-                <option value={"neck-pain"}>Neck Pain</option>
-                <option value={"knee-pain"}>Knee Pain</option>
-                <option value={"joint-pain"}>Joint Pain</option>
-                <option value={"shoulder-pain"}>Shoulder Pain</option>
-                <option value={"injury-treatments"}>Injury Treatment</option>
-                <option value={"treatments"}>Treatments</option>
-                <option value={"health-tips"}>Health Tips</option>
-                <option value={"update"}>Update</option>
-              </Input>
-            </FormGroup>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="6">
             <FormGroup>
               <Label for="exampleEmail">Meta Description</Label>
               <Input
@@ -160,7 +131,23 @@ const BlogEdit = () => {
               />
             </FormGroup>
           </Col>
-          <Col xs="6">
+        </Row>
+        <Row>
+          {/* <Col xs="6">
+            <FormGroup>
+              <Label for="exampleEmail">Meta Description</Label>
+              <Input
+                id="metaDes"
+                name="metaDes"
+                value={metaDes}
+                placeholder="Meta Description"
+                onChange={(event) => {
+                  setMetaDes(event.target.value);
+                }}
+              />
+            </FormGroup>
+          </Col> */}
+          {/* <Col xs="6">
             <FormGroup>
               <Label for="exampleFile">File</Label>
               <Input
@@ -170,7 +157,7 @@ const BlogEdit = () => {
                 onChange={(e) => setImage(e.target.files[0])}
               />
             </FormGroup>
-          </Col>
+          </Col> */}
         </Row>
 
         <Button type="submit" style={{ maxWidth: "75px" }}>
